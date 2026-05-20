@@ -9,8 +9,19 @@ str_split_nums(string, pattern)
 \arguments{
 \item{string}{A character vector with, at most, one element.}
 
-\item{pattern}{A string denoting the separator by which the string parameter
-should be split on}
+\item{pattern}{Pattern to look for.
+
+The default interpretation is a regular expression, as described in
+\code{vignette("regular-expressions")}. Use \code{\link[stringr:regex]{regex()}} for finer control of the
+matching behaviour.
+
+Match a fixed string (i.e. by comparing only bytes), using
+\code{\link[stringr:fixed]{fixed()}}. This is fast, but approximate. Generally,
+for matching human text, you'll want \code{\link[stringr:coll]{coll()}} which
+respects character matching rules for the specified locale.
+
+Match character, word, line and sentence boundaries with
+\code{\link[stringr:boundary]{boundary()}}. The empty string, \verb{""``, is equivalent to }boundary("character")`.}
 }
 \value{
 A numeric vector.

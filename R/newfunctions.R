@@ -1,7 +1,6 @@
 #' Split a string on commas
 #'
 #' @param string A character vector with, at most, one element.
-#' @inheritParams stringr::str_split
 #'
 #' @return A character vector.
 #' @export
@@ -21,8 +20,6 @@ str_split_comma <- function(string) {
 #' Split a string and converts it to numeric
 #'
 #' @param string A character vector with, at most, one element.
-#' @param pattern A string denoting the separator by which the string parameter
-#'    should be split on
 #' @inheritParams stringr::str_split
 #'
 #' @return A numeric vector.

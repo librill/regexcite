@@ -1,8 +1,6 @@
 #' Split a string
 #'
 #' @param string A character vector with, at most, one element.
-#' @param pattern A string denoting the separator to split on
-#' @param n An integer for the number of split pieces to return. Default is all
 #' @inheritParams stringr::str_split
 #'
 #' @return A character vector.
