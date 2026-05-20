@@ -82,7 +82,6 @@ returns all separated components.
 ``` r
 str_split_comma("alpha,beta,gamma")
 #> [1] "alpha" "beta"  "gamma"
-#> [1] "alpha" "beta"  "gamma"
 ```
 
 `str_split_nums()` is also similar to `str_split_one()`, as it takes in
@@ -92,6 +91,5 @@ element to numeric after being split.
 
 ``` r
 str_split_nums("2,4,6", pattern = ",")
-#> [1] 2 4 6
 #> [1] 2 4 6
 ```
