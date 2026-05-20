@@ -74,3 +74,24 @@ y <- "192.168.0.1"
 str_split_one(y, pattern = stringr::fixed("."))
 #> [1] "192" "168" "0"   "1"
 ```
+
+`str_split_comma()` is similar to `str_split_one()` but is specific to
+the comma separator. It also does not contain the `n` argument and
+returns all separated components.
+
+``` r
+str_split_comma("alpha,beta,gamma")
+#> [1] "alpha" "beta"  "gamma"
+#> [1] "alpha" "beta"  "gamma"
+```
+
+`str_split_nums()` is also similar to `str_split_one()`, as it takes in
+a string to be split, and the pattern by which to split it on. However,
+it is geared towards strings made up of numbers, as it converts each
+element to numeric after being split.
+
+``` r
+str_split_nums("2,4,6", pattern = ",")
+#> [1] 2 4 6
+#> [1] 2 4 6
+```
